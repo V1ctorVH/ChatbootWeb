@@ -1,0 +1,82 @@
+/* ─── Reset & Base ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Paleta principal - inspirada em tons de teal profundo */
+  --primary:        #0A7B6C;
+  --primary-dark:   #065F52;
+  --primary-light:  #11A090;
+  --accent:         #25D366;
+  --accent-glow:    rgba(37, 211, 102, 0.25);
+
+  /* Backgrounds */
+  --bg-app:         #0D1117;
+  --bg-sidebar:     #111820;
+  --bg-chat:        #0D1117;
+  --bg-input:       #161D27;
+  --bg-bubble-ai:   #1A2332;
+  --bg-bubble-user: #0A4A3F;
+  --bg-header:      #0F1923;
+
+  /* Texto */
+  --text-primary:   #E8EDF5;
+  --text-secondary: #8B9BB4;
+  --text-muted:     #4A5568;
+  --text-time:      #6B7A90;
+
+  /* Bordas */
+  --border:         rgba(255,255,255,0.06);
+  --border-input:   rgba(255,255,255,0.1);
+
+  /* Sombras */
+  --shadow-bubble:  0 1px 3px rgba(0,0,0,0.4);
+  --shadow-input:   0 -4px 24px rgba(0,0,0,0.3);
+
+  /* Tipografia */
+  --font-ui:        'Outfit', sans-serif;
+  --font-body:      'DM Sans', sans-serif;
+
+  /* Outros */
+  --radius-bubble:  18px;
+  --radius-input:   24px;
+  --transition:     0.2s ease;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Seleção de texto */
+::selection {
+  background: var(--accent-glow);
+  color: var(--text-primary);
+}
